@@ -1,0 +1,126 @@
+/* ========== GOOGLE FONTS ========== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+/* ========== CSS VARIABLES (Premium Palette) ========== */
+:root {
+  /* Primary – Deep Ocean Blues */
+  --color-primary: #0A2A43;
+  --color-primary-dark: #061A2B;
+  --color-primary-light: #134066;
+
+  /* Accent – Fresh Aqua */
+  --color-accent: #00A8A8;
+  --color-accent-light: #00C4C4;
+  --color-accent-soft: #E0F7F7;
+
+  /* Neutrals */
+  --color-white: #FFFFFF;
+  --color-off-white: #F8FAFB;
+  --color-light-gray: #E8EEF2;
+  --color-gray: #6B7C8A;
+  --color-dark: #1A1A1A;
+
+  /* Earth / Support */
+  --color-earth: #8B7355;
+  --color-success: #2E8B57;
+
+  /* Typography */
+  --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+
+  /* Spacing & Layout */
+  --container-max: 1200px;
+  --section-padding: 100px 0;
+  --nav-height: 80px;
+
+  /* Shadows & Effects */
+  --shadow-soft: 0 4px 20px rgba(10, 42, 67, 0.08);
+  --shadow-medium: 0 8px 30px rgba(10, 42, 67, 0.12);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========== RESET & BASE ========== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* ========== UTILITY CLASSES ========== */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: var(--section-padding);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+  color: var(--color-primary);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--color-gray);
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+}
+
+/* ========== RESPONSIVE BASE ========== */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 70px 0;
+    --nav-height: 70px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+}
