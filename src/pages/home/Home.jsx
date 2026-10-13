@@ -59,10 +59,10 @@ const Home = () => {
       animate="visible"
       variants={staggerContainer}
     >
-      <motion.div className="hero__badge" variants={fadeUp}>
+      {/* <motion.div className="hero__badge" variants={fadeUp}>
         <span className="hero__badge-dot"></span>
         Sustainable • Bio-Secure • Premium Grade
-      </motion.div>
+      </motion.div> */}
 
       <motion.h1 className="hero__title" variants={fadeUp}>
         Exceptional Tilapia.<br />
